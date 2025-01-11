@@ -1,4 +1,3 @@
-# CCNA-200-301-Lab_Guide_Full
 # Network Task Documentation
 
 ## Task Overview
@@ -57,19 +56,79 @@ The topology consists of:
 
 ---
 
-### 2. **Router Configuration**
+### 2. **Switch Configuration**
+
+#### Step-by-Step Commands for Switch (Green Zone):
+1. **Enter privileged mode:**
+   ```bash
+   enable
+   ```
+2. **Enter configuration mode:**
+   ```bash
+   configure terminal
+   ```
+3. **Configure VLAN 1 IP address:**
+   ```bash
+   interface vlan 1
+   ip address 192.168.1.10 255.255.255.0
+   no shutdown
+   exit
+   ```
+4. **Set default gateway:**
+   ```bash
+   ip default-gateway 192.168.1.1
+   exit
+   ```
+5. **Save configuration:**
+   ```bash
+   write memory
+   ```
+
+#### Step-by-Step Commands for Switch (Blue Zone):
+1. **Enter privileged mode:**
+   ```bash
+   enable
+   ```
+2. **Enter configuration mode:**
+   ```bash
+   configure terminal
+   ```
+3. **Configure VLAN 1 IP address:**
+   ```bash
+   interface vlan 1
+   ip address 172.16.5.10 255.255.255.0
+   no shutdown
+   exit
+   ```
+4. **Set default gateway:**
+   ```bash
+   ip default-gateway 172.16.5.1
+   exit
+   ```
+5. **Save configuration:**
+   ```bash
+   write memory
+   ```
+
+---
+
+### 3. **Router Configuration**
 
 The following commands were used to configure the router:
 
 #### Step-by-Step Commands:
 
-1. **Enter configuration mode:**
+1. **Enter privileged mode:**
    ```bash
    enable
+   ```
+
+2. **Enter configuration mode:**
+   ```bash
    configure terminal
    ```
 
-2. **Configure interface Fa0/0 (connected to Network A):**
+3. **Configure interface Fa0/0 (connected to Network A):**
    ```bash
    interface fa0/0
    ip address 192.168.1.1 255.255.255.0
@@ -77,7 +136,7 @@ The following commands were used to configure the router:
    exit
    ```
 
-3. **Configure interface Fa0/1 (connected to Network B):**
+4. **Configure interface Fa0/1 (connected to Network B):**
    ```bash
    interface fa0/1
    ip address 172.16.5.1 255.255.255.0
@@ -85,19 +144,19 @@ The following commands were used to configure the router:
    exit
    ```
 
-4. **Set up static routes:**
+5. **Set up static routes:**
    ```bash
    ip route 192.168.1.0 255.255.255.0 fa0/0
    ip route 172.16.5.0 255.255.255.0 fa0/1
    exit
    ```
 
-5. **Save the configuration:**
+6. **Save the configuration:**
    ```bash
    write memory
    ```
 
-6. **Verify the configuration:**
+7. **Verify the configuration:**
    ```bash
    show running-config
    show ip route
@@ -134,7 +193,7 @@ The following commands were used to configure the router:
    - PC4 to PC9: Successful.
    - PC5 to PC10: Successful.
    - PC6 to PC11: Successful.
-   
+
 ---
 
 ## Media
@@ -142,9 +201,10 @@ The following commands were used to configure the router:
 ### Screenshots
 Include the following screenshots:
 1. Network topology.
-2. Router configurations.
-3. Ping and traceroute results.
-4. Routing table display.
+2. Router configurations (detailed step-by-step commands).
+3. Switch configurations (step-by-step commands).
+4. Ping and traceroute results.
+5. Routing table display.
 
 ### Video Walkthrough
 Create and include a video demonstrating:
@@ -156,11 +216,12 @@ Create and include a video demonstrating:
 ## Repository Structure
 
 ```
-Project-Name/
+Task_1/
 |
 |-- Screenshots/
 |   |-- topology.png
-|   |-- config.png
+|   |-- router_config.png
+|   |-- switch_config.png
 |   |-- ping_test.png
 |   |-- routing_table.png
 |
@@ -181,10 +242,9 @@ Contributions are welcome! Fork the repository and submit a pull request for imp
 
 ## Author
 **AbdulRhman AbdulGhaffar**  
-*IT Technical Support and Network Engineer*
+**IT Seystm Administrator | Network Engineer**
 
 ---
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-
