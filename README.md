@@ -42,7 +42,7 @@ The following is the file structure of this repository, with each folder contain
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/aboodi200/CCNA-200-301-Lab-Guide-Full.git
+    git clone https://github.com/AboodiAbdo/CCNA-200-301-Lab-Guide-Full.git
     ```
 
 2. Open the Packet Tracer files and follow the instructions in each lab document.
